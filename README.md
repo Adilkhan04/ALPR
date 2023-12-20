@@ -3,11 +3,17 @@
 
 
 Automatic License Plate Recognition (ALPR) System with YOLOv8, ESRGAN, and EasyOCR
-Overview:
+## Overview:
 
 This repository presents a real-time, highly accurate ALPR system trained on a combination of YOLOv8, ESRGAN, and EasyOCR models. It can detect and recognize license plates of various shapes and sizes, even in challenging environments like low-light conditions.
+## Methodology:
+Our ALPR solution employs a combination of custom-trained YOLOv8, EasyOCR, and pre-trained ESRGAN models. The methodology involves:
 
-Key Features:
+1. **Training the YOLOv8 algorithm** to detect license plates in images.
+2. Using **ESRGAN** to enhance the quality of low-resolution images, resulting in high-quality output.
+3. Sharing this output with YOLOv8, which detects the license plate in images by mapping the license plate coordinates.
+4. Transferring the output of YOLOv8 to **EasyOCR**, which detects the characters in the license plate and finally displays the output.
+## Key Features:
 
 Real-time performance: Handles video streams and images with minimal latency.
 High accuracy: Achieves 97% F1 score and 98.5% mean average precision on diverse datasets.
@@ -29,7 +35,7 @@ EasyOCR Recognition: Based on YOLOv8's output, EasyOCR extracts and recognizes t
 
 https://github.com/Adilkhan04/ALPR/assets/79263426/c39a7ef8-643c-49e0-a5dc-ac411d0ed72c
 
-Benefits:
+## Benefits:
 
 Enhanced security and surveillance: Track vehicles, enforce traffic regulations, and improve security systems.
 Automated data collection: Extract license plate information for research, toll booths, or vehicle access control.
@@ -42,6 +48,6 @@ train the YOLOv8 model, you can get the dataset from roboflow.com
 make sure that yolo is version 8.0.0 otherwise train the YOLOv8 from Ultralytics official repository in GitHub
 and run the model with integrated YOLOv8 and ESRGAN
 
-Future work:
+## Future work:
 In the future, there is potential to enhance ALPR systems by incorporating more parameters such as driver facial recognition and vehicle speed. Additionally, it would be beneficial to create a user-friendly interface for the system.
 one can also custom-train an ESRGAN instead of a pre-trained model or use a more advanced super-resolution model for improving license plate detection quality but remember it should be able to detect in Real-time
